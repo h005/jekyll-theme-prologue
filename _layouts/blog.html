@@ -13,6 +13,18 @@ layout: default
 		{%- capture _title -%}
 			<a href="{{- _post.url | absolute_url -}}">{{- _post.title -}}</a>
 		{%- endcapture -%}
+<!-- 		{%- capture image -%}
+			{% if _post.img -%}{{- _post.author }} | {% endif %}
+			{{- _post.date | date_to_long_string -}}
+		{%- endcapture -%} -->
+		<!-- {%- capture _img -%}
+			{% if _post.img %}{{- _post.img }} | {% endif %}
+		{%- endcapture -%} -->
+				<!-- <img src={{ "/assets/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}" width="480" height="270">
+                      <hr /> -->
+                <!-- <img src="/home/hejw005/Documents/learning/myBlogPrologue/assets/images/1830213237.jpg" alt="test Img"/> -->
+		<!-- <p> normal words </p> -->
+		{%- capture _img -%}<p>{{- _post.img -}}</p>{%- endcapture -%}
 		{%- capture _subtitle -%}
 			{% if _post.author -%}{{- _post.author }} | {% endif %}
 			{{- _post.date | date_to_long_string -}}
